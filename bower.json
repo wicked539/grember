@@ -1,0 +1,13 @@
+{
+    "name": "grember",
+    "version": "0.0.1",
+    "description": "grunt / bower / ember playground",
+    "main": "main.js",
+    "moduleType": [
+        "amd"
+    ],
+    "private": true,
+    "dependencies": {
+        "ember": "1.6.1"
+    }
+}
