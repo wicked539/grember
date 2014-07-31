@@ -10,11 +10,12 @@ module.exports = function(grunt) {
             }
         },
         bowercopy: {
-            libs: {
+            lib: {
                 options: {
-                    destPrefix: 'build/libs'
+                    destPrefix: 'build/lib'
                 },
                 files: {
+                    'require.js': 'requirejs/require.js',
                     'ember.js': 'ember/ember.js',
                     'jquery.js': 'jquery/dist/jquery.js',
                     'handlebars.js': 'handlebars/handlebars.js'
