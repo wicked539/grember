@@ -1,12 +1,7 @@
 module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        karma: {
-            unit: {
-                configFile: 'karma.conf.js'
-            }
-        },
+        clean: ['build'],
         copy: {
             main: {
                 files: [
@@ -25,14 +20,20 @@ module.exports = function(grunt) {
                     'handlebars.js': 'handlebars/handlebars.js'
                 }
             }
+        },
+        karma: {
+            unit: {
+                configFile: 'karma.conf.js'
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-bowercopy');
     grunt.loadNpmTasks('grunt-karma');
 
 
     // Default task(s).
-    grunt.registerTask('default', ['copy', 'bowercopy', 'karma']);
+    grunt.registerTask('default', ['clean', 'copy', 'bowercopy', 'karma']);
 };
