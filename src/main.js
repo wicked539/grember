@@ -5,8 +5,14 @@ require(['config'], function() {
         var emberApp = Ember.Application.create();
 
         emberApp.Router.map(function() {
-            this.route('hello-template', { path: '/' });
-            this.route('foo-template', { path: '/foo' });
+            this.route('start', { path: '/' });
+            this.route('foo', { path: '/foo' });
+        });
+
+        emberApp.FooRoute = Ember.Route.extend({
+            model: function() {
+                return { name: 'yo!' };
+            }
         });
     });
 });
