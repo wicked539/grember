@@ -11,7 +11,11 @@ require(['config'], function() {
 
         emberApp.FooRoute = Ember.Route.extend({
             model: function() {
-                return { name: 'yo!' };
+                return [
+                    { name: 'yo!' },
+                    { name: 'heribert' },
+                    { name: 'fridolin' }
+                ];
             }
         });
     });
