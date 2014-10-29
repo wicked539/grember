@@ -18,7 +18,8 @@ module.exports = function(grunt) {
                     'require.js': 'requirejs/require.js',
                     'ember.js': 'ember/ember.js',
                     'jquery.js': 'jquery/dist/jquery.js',
-                    'handlebars.js': 'handlebars/handlebars.js'
+                    'handlebars.js': 'handlebars/handlebars.js',
+                    'stacktrace.js': 'stacktrace-js/stacktrace.js'
                 }
             }
         },
